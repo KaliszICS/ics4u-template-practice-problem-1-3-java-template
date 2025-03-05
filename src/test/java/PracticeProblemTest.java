@@ -1,49 +1,149 @@
+import java.lang.reflect.Method;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 import java.io.*;
-
 public class PracticeProblemTest {
+@Test
+@DisplayName("")
+void readFileTest3() {
+    Class<?> testClass = PracticeProblem.class;
+    try {
+        Class[] cArg = {String.class};
+        Method method = testClass.getDeclaredMethod("readFile", cArg);
+  // Enter code here
+  try {
+    assertEquals("Hello\nWorld", (String)method.invoke(null, "file2.txt"));
+    
+  } catch (Exception e) {
+    fail(e.getMessage());  // Noncompliant
+  }
+}
 
-   @Test
-   public void testOutput()
-   {
-     PrintStream originalOut = System.out;
-     ByteArrayOutputStream bos = new ByteArrayOutputStream();
-     System.setOut(new PrintStream(bos));
 
-     // action
-     PracticeProblem.q1();
+    catch (NoSuchMethodException e) {
+        fail("Method does not exist");
+}
+    catch(Exception e) {
+        fail("Something weird happened");
+}
+}
+@Test
+@DisplayName("")
+void backwardsReadFileTest1() {
+    Class<?> testClass = PracticeProblem.class;
+    try {
+        Class[] cArg = {String.class};
+        Method method = testClass.getDeclaredMethod("backwardsReadFile", cArg);
+  // Enter code here
+  try {
+    assertEquals("dlroW olleH", (String)method.invoke(null, "file.txt"));
+    
+  } catch (Exception e) {
+    fail(e.getMessage());  // Noncompliant
+  }
+}
 
-     // assertion
-     assertEquals("There once was a man from St. Ives.\n", bos.toString());
 
-     // undo the binding in System
-     System.setOut(originalOut);
-   }
+    catch (NoSuchMethodException e) {
+        fail("Method does not exist");
+}
+    catch(Exception e) {
+        fail("Something weird happened");
+}
+}
+@Test
+@DisplayName("")
+void backwardsReadFileTest2() {
+    Class<?> testClass = PracticeProblem.class;
+    try {
+        Class[] cArg = {String.class};
+        Method method = testClass.getDeclaredMethod("backwardsReadFile", cArg);
+  // Enter code here
+  try {
+      assertEquals("654321", (String)method.invoke(null, "file1.txt"));
+    
+  } catch (Exception e) {
+    fail(e.getMessage());  // Noncompliant
+  }
+}
 
-   @Test
-   public void testInputandOutput()
-   {
-      String data = "Users Input";
-      System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
-      // action
-      PracticeProblem.q1();
+    catch (NoSuchMethodException e) {
+        fail("Method does not exist");
+}
+    catch(Exception e) {
+        fail("Something weird happened");
+}
+}
+@Test
+@DisplayName("")
+void backwardsReadFileTest3() {
+    Class<?> testClass = PracticeProblem.class;
+    try {
+        Class[] cArg = {String.class};
+        Method method = testClass.getDeclaredMethod("backwardsReadFile", cArg);
+  // Enter code here
+  try {
+      assertEquals("dlroW\nolleH", (String)method.invoke(null, "file2.txt"));
+  } catch (Exception e) {
+    fail(e.getMessage());  // Noncompliant
+  }
+}
 
-      // assertion
-      assertEquals("There once was a man from St. Ives.\n", bos.toString());
 
-      // undo the binding in System
-      System.setOut(originalOut);
-   }
+    catch (NoSuchMethodException e) {
+        fail("Method does not exist");
+}
+    catch(Exception e) {
+        fail("Something weird happened");
+}
+}
+@Test
+@DisplayName("")
+void readFileTest2() {
+    Class<?> testClass = PracticeProblem.class;
+    try {
+        Class[] cArg = {String.class};
+        Method method = testClass.getDeclaredMethod("readFile", cArg);
+  // Enter code here
+  try {
+    
+    assertEquals("123456", (String)method.invoke(null, "file1.txt"));
+  } catch (Exception e) {
+    fail(e.getMessage());  // Noncompliant
+  }
+}
 
-   @Test
-   public void testQ3()
-   {
-     
-   }
+
+    catch (NoSuchMethodException e) {
+        fail("Method does not exist");
+}
+    catch(Exception e) {
+        fail("Something weird happened");
+}
+}
+@Test
+@DisplayName("")
+void readFileTest1() {
+    Class<?> testClass = PracticeProblem.class;
+    try {
+        Class[] cArg = {String.class};
+        Method method = testClass.getDeclaredMethod("readFile", cArg);
+  // Enter code here
+  try {
+    
+    assertEquals("Hello World", (String)method.invoke(null, "file.txt"));
+  } catch (Exception e) {
+    fail(e.getMessage());  // Noncompliant
+  }
+}
+
+
+    catch (NoSuchMethodException e) {
+        fail("Method does not exist");
+}
+    catch(Exception e) {
+        fail("Something weird happened");
+}
+}
 }
